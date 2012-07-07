@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    <h1>{% trans "System authorization" %}</h1>
+    {% if form.errors %}
+        <p>{% trans "Your username and password didn't match. Please try again." %}</p>
+    {% endif %}
+
+    <div class="form">
+        <form method="post" action=".">
+            {% csrf_token %}
+            <table class="form">
+                <tr>
+                    <th><label for="id_username">{% trans "Your username:" %}</label></th>
+                    <td>{{ form.username }}</td>
+                </tr>
+                <tr>
+                    <th><label for="id_password">{% trans "Your password:" %}</label></th>
+                    <td>{{ form.password }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Войти"/>
+                        <input type="hidden" name="next" value="{{ next }}"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+{% endblock %}
