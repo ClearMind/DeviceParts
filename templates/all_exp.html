@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{% trans "Available expendables" %}</h1>
+    <div class="controls">
+        <input type="checkbox" id="show-hide" name="show-hide"/>
+        {% trans "Hide/show zeroes" %}
+    </div>
+    <table>
+        <tr>
+            <th>{% trans "Expendable" %}</th>
+            <th>{% trans "Store" %}</th>
+            <th>{% trans "Count" %}</th>
+        </tr>
+        {% for p in parts%}
+        <tr {% ifequal p.count 0 %} class="zero" {% endifequal %} >
+            <td>
+                {% ifequal p.count 0 %}
+                    {{ p.part }}
+                {% else %}
+                    <a href="/install/?part={{ p.pk }}">{{ p.part }}</a>
+                {% endifequal %}
+            </td>
+            <td><a href="?store={{ p.store.pk }}">{{ p.store }}</a></td>
+            <td>{{ p.count }}</td>
+        </tr>
+        {% empty %}
+            <tr>
+                <td colspan=3>{%  trans "Empty!" %}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

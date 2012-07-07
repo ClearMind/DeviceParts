@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-29 17:11+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: account/views.py:12
+msgid "Login"
+msgstr "Вход"
+
+#: app/models.py:13
+msgid "menu item"
+msgstr "пункт меню"
+
+#: app/models.py:14
+msgid "menu items"
+msgstr "пункты меню"
+
+#: expendables/models.py:6 parts/models.py:6 parts/models.py:19
+#: parts/models.py:32 parts/models.py:78
+msgid "name"
+msgstr "название"
+
+#: expendables/models.py:13
+msgid "employee"
+msgstr "сотрудник"
+
+#: expendables/models.py:14
+msgid "employees"
+msgstr "сотрудники"
+
+#: expendables/models.py:18 parts/models.py:46 parts/models.py:59
+msgid "type"
+msgstr "тип"
+
+#: expendables/models.py:19 parts/models.py:38 parts/models.py:60
+msgid "brand"
+msgstr "производитель"
+
+#: expendables/models.py:20 parts/models.py:61
+msgid "model"
+msgstr "модель"
+
+#: expendables/models.py:21 parts/models.py:62
+msgid "number"
+msgstr "номер"
+
+#: expendables/models.py:30
+msgid "expendable"
+msgstr "расходник"
+
+#: expendables/models.py:31
+msgid "expendables"
+msgstr "расходники"
+
+#: expendables/models.py:44
+msgid "expendable in store"
+msgstr "расходник на складе"
+
+#: expendables/models.py:45
+msgid "expendables in store"
+msgstr "расходники на складе"
+
+#: expendables/views.py:12
+msgid "All expendables"
+msgstr "Все расходники"
+
+#: parts/forms.py:7
+msgid "task"
+msgstr "заявка"
+
+#: parts/forms.py:8 parts/models.py:45
+msgid "inventory number"
+msgstr "инвентарный номер"
+
+#: parts/forms.py:9 parts/models.py:25
+msgid "device type"
+msgstr "тип устройства"
+
+#: parts/forms.py:10
+msgid "install date"
+msgstr "дата установки"
+
+#: parts/forms.py:11 parts/forms.py:22 parts/models.py:72 parts/models.py:90
+msgid "part"
+msgstr "железка"
+
+#: parts/forms.py:23 parts/models.py:92
+msgid "count"
+msgstr "количество"
+
+#: parts/forms.py:24
+msgid "to store"
+msgstr "на cклад"
+
+#: parts/models.py:12
+msgid "part type"
+msgstr "тип железки"
+
+#: parts/models.py:13
+msgid "part types"
+msgstr "типы железок"
+
+#: parts/models.py:26
+msgid "device types"
+msgstr "типы устройств"
+
+#: parts/models.py:39
+msgid "brands"
+msgstr "производители"
+
+#: parts/models.py:52
+msgid "device"
+msgstr "устройство"
+
+#: parts/models.py:53
+msgid "devices"
+msgstr "устройства"
+
+#: parts/models.py:63
+msgid "date of creation"
+msgstr "дата создания"
+
+#: parts/models.py:73
+msgid "parts"
+msgstr "железки"
+
+#: parts/models.py:84 parts/models.py:91
+msgid "store"
+msgstr "cклад"
+
+#: parts/models.py:85
+msgid "stores"
+msgstr "склады"
+
+#: parts/models.py:99
+msgid "part in store"
+msgstr "запчасть на складе"
+
+#: parts/models.py:100
+msgid "parts in store"
+msgstr "запчасти на складе"
+
+#: parts/models.py:117
+msgid "part in device"
+msgstr "запчасть в устройстве"
+
+#: parts/models.py:118
+msgid "parts in devices"
+msgstr "запчасти в устройстве"
+
+#: parts/views.py:89
+msgid "Installation is done!"
+msgstr "Установка выполнена!"
+
+#: parts/views.py:124
+msgid "Transition is done!"
+msgstr "Перемещение выполнено!"
+
+#: parts/views.py:133 templates/change_store.html:5
+msgid "Part transition"
+msgstr "Перемещение железяк"
+
+#: templates/all_exp.html:5
+msgid "Available expendables"
+msgstr "Доступные расходники"
+
+#: templates/all_exp.html:8 templates/index.html:8
+msgid "Hide/show zeroes"
+msgstr "Спрятать/показать нулевые"
+
+#: templates/all_exp.html:12
+msgid "Expendable"
+msgstr "Расходник"
+
+#: templates/all_exp.html:13 templates/index.html:13
+msgid "Store"
+msgstr "Склад"
+
+#: templates/all_exp.html:14 templates/index.html:14
+msgid "Count"
+msgstr "Количество"
+
+#: templates/all_exp.html:30 templates/index.html:30
+#: templates/installed.html:37
+msgid "Empty!"
+msgstr "Пусто!"
+
+#: templates/base.html:5
+msgid "Zip Warehouse"
+msgstr "Склад железяк"
+
+#: templates/base.html:26
+msgid "Add new menu item"
+msgstr "добавить новый пункт меню"
+
+#: templates/change_store.html:7
+msgid "You have not permissions for this action!"
+msgstr "Нет прав для выполнения данного действия!"
+
+#: templates/change_store.html:17 templates/install.html:13
+msgid "Submit"
+msgstr "Отправить"
+
+#: templates/index.html:5
+msgid "Available parts"
+msgstr "Доступные комплектующие"
+
+#: templates/index.html:12
+msgid "Part"
+msgstr "Запчасть"
+
+#: templates/install.html:5
+msgid "Part installation"
+msgstr "Установка железяк"
+
+#: templates/installed.html:6
+msgid "Installed parts "
+msgstr "Установленные железки"
+
+#: templates/installed.html:8
+msgid "for "
+msgstr "для "
+
+#: templates/installed.html:13
+msgid "Print act"
+msgstr "Печатать акт"
+
+#: templates/installed.html:17 templates/installed_in_device.html:11
+msgid "Who"
+msgstr "Кто"
+
+#: templates/installed.html:18 templates/installed_in_device.html:12
+msgid "When"
+msgstr "Когда"
+
+#: templates/installed.html:19 templates/installed_in_device.html:13
+msgid "What"
+msgstr "Что"
+
+#: templates/installed.html:20
+msgid "Where"
+msgstr "Куда"
+
+#: templates/installed.html:21 templates/installed_in_device.html:14
+msgid "Why"
+msgstr "Зачем"
+
+#: templates/installed_in_device.html:6
+msgid "Parts was not installed in device with number: "
+msgstr "Запчасти не были установлены в устройство с номером: "
+
+#: templates/installed_in_device.html:8
+msgid "Installed in "
+msgstr "Установлено в "
+
+#: templates/registration/login.html:4
+msgid "System authorization"
+msgstr "Авторизация в системе"
+
+#: templates/registration/login.html:6
+msgid "Your username and password didn't match. Please try again."
+msgstr "Ваши имя пользователя и пароль не подходят. Попробуй еще разок."
+
+#: templates/registration/login.html:14
+msgid "Your username:"
+msgstr "Имя пользователя:"
+
+#: templates/registration/login.html:18
+msgid "Your password:"
+msgstr "Пароль:"

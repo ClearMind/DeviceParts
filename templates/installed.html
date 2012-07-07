@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block content %}
+    {% if not only_content %}
+        <h1>
+            {% trans "Installed parts " %}
+        {% if device %}
+            {% trans "for " %} {{ device }}
+        {% endif %}
+        </h1>
+    {% endif %}
+    {% if device %}
+        <a class="action" id="print_act"  href="#" data-deviceid="{{ device.pk }}">{% trans "Print act" %}</a>
+    {% endif %}
+    <table>
+        <tr>
+            <th>{% trans "Who" %}</th>
+            <th>{% trans "When" %}</th>
+            <th>{% trans "What" %}</th>
+            <th>{% trans "Where" %}</th>
+            <th>{% trans "Why" %}</th>
+        </tr>
+    {% for p in parts %}
+        <tr>
+            <td><a href="?user={{ p.user.pk }}">{{ p.user.last_name }} {{ p.user.first_name }}</a></td>
+            <td><a href="?date={{ p.date.isoformat }}">{{ p.date }}</a></td>
+            <td><a href="?part={{ p.part.pk }}">{{ p.part }}</a></td>
+            <td><a href="?device={{ p.device.pk }}">{{ p.device }}</a></td>
+            <td>
+                {% if p.task%}
+                    <a href="http://support.surgpu.ru/python/task.py/edit_task_form?id={{ p.task }}">{{ p.task }}</a>
+                {% endif %}
+            </td>
+        </tr>
+    {% empty %}
+        <tr>
+            <td colspan=5>{%  trans "Empty!" %}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <iframe width="0" height="0" src="" id="down_link">IFrame error</iframe>
+{% endblock %}

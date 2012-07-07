@@ -1,0 +1,46 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if title %}{{ title }}{% else %}{% trans "Zip Warehouse" %}{% endif %}</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js"></script>
+    <link type="text/css" rel="stylesheet/less" href="{{ STATIC_URL }}css/base.less"/>
+    {% for c in csss %}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/{{ c }}" type="text/css" />
+    {% endfor %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/less-1.1.3.js"></script>
+    {% for s in jscripts %}
+        <script type="text/javascript" src="{{ STATIC_URL }}js/{{ s }}"></script>
+    {% endfor %}
+</head>
+<body>
+{% if not only_content %}
+    <div class="menu" role="nav">
+        <ul class="first-level">
+            {% for mi in menu_items %}
+                {% if mi.menuitem_set.count > 0 %}
+                    <li>
+                        <a href="{{ mi.url }}">{{ mi.name }}</a>
+                        <ul class="second-level">
+                            {% for i in mi.menuitem_set.all %}
+                                <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endif %}
+            {% empty %}
+                <li><a href="/admin/app/menuitem/">{% trans "Add new menu item" %}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="both"></div>
+{% endif %}
+
+<div class="main" role="main">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>
